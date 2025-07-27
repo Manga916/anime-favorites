@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>نوها ترحب بك</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #1a1a1a, #000);
+      font-family: 'Cairo', sans-serif;
+      overflow: hidden;
+      color: #fff;
+    }
+    .welcome {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 2em;
+      opacity: 0;
+    }
+    .enter-button {
+      margin-top: 2em;
+      padding: 0.8em 2em;
+      font-size: 1em;
+      background-color: #ff2d95;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .enter-button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome">
+    أهلاً بك في عالم <strong>نوها كورونو</strong><br>
+    🖤🌪️ فخامة لا تعرف الحدود 🖤🌪️
+    <br><br>
+    <button class="enter-button">أدخل الآن</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    gsap.to(".welcome", {
+      duration: 2,
+      delay: 1,
+      opacity: 1,
+      y: -50,
+      ease: "power3.out"
+    });
+  </script>
+</body>
+</html>
