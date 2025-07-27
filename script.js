@@ -5,3 +5,4 @@ gsap.from(".welcome", {
   opacity: 0,
   ease: "power2.out"
 });
+<script src="js/script.js"></script>
