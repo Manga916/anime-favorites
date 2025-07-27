@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>مفضلتي الملكية 👑</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      font-family: 'Cairo', sans-serif;
+      color: #fff;
+      padding: 20px;
+    }
+    .anime-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      margin-bottom: 15px;
+      padding: 12px;
+      transition: 0.3s;
+    }
+    .anime-card:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.2);
+    }
+    img {
+      max-width: 100px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ قائمة أنمياتي المجنونة والفخمة</h1>
+  <div id="anime-list"></div>
+
+  <script>
+    window.addEventListener('message', (event) => {
+      if (event.data.type === 'addAnime') {
+        const { title, url, image } = event.data;
+        const card = document.createElement('div');
+        card.className = 'anime-card';
+        card.innerHTML = `
+          <h2>${title}</h2>
+          <a href="${url}" target="_blank">📎 الرابط</a><br>
+          <img src="${image}" alt="${title}" />
+        `;
+        document.getElementById('anime-list').appendChild(card);
+      }
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>مفضلتي الملكية 👑</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      font-family: 'Cairo', sans-serif;
+      color: #fff;
+      padding: 20px;
+    }
+    .anime-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      margin-bottom: 15px;
+      padding: 12px;
+      transition: 0.3s;
+    }
+    .anime-card:hover {
+      transform: scale(1.03);
+      background: rgba(255,255,255,0.2);
+    }
+    img {
+      max-width: 100px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ قائمة أنمياتي المجنونة والفخمة</h1>
+  <div id="anime-list"></div>
+
+  <script>
+    window.addEventListener('message', (event) => {
+      if (event.data.type === 'addAnime') {
+        const { title, url, image } = event.data;
+        const card = document.createElement('div');
+        card.className = 'anime-card';
+        card.innerHTML = `
+          <h2>${title}</h2>
+          <a href="${url}" target="_blank">📎 الرابط</a><br>
+          <img src="${image}" alt="${title}" />
+        `;
+        document.getElementById('anime-list').appendChild(card);
+      }
+    });
+  </script>
+</body>
+</html>
